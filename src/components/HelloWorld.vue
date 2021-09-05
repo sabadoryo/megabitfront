@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <router-link class="table1" to="/table">table</router-link>
     <div class="div1">
       <div class="header">
         <div class="logoh">

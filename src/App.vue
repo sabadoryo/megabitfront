@@ -28,9 +28,10 @@ body {
   /*overflow: hidden;*/
 }
 
-.table {
+.table1 {
   position: absolute;
   z-index: 1000000000;
+  left:15%;
 }
 @media only screen and (max-width: 1200px) {
   .table1 {
