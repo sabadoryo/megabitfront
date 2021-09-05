@@ -111,7 +111,7 @@ export default {
         return;
       }
 
-      this.axios.post('http://yernar-abilbay.magebithr.com/create.php', {
+      this.axios.post('http://yernar-abilbay.magebithr.com/api/create.php', {
         email: this.email,
         termsAgreed: this.termsAgreed
       }).then(resp => {
