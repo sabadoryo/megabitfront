@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     getUsers() {
-      this.axios.get('http://localhost:8000/read.php', {
+      this.axios.get('http://yernar-abilbay.magebithr.com/read.php', {
         params: {
           sortDir: this.sortDir,
           sortBy: this.sortBy,
