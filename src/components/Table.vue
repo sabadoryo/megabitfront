@@ -37,7 +37,7 @@
         <td>{{ user.id }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.created_at }}</td>
-        <td><button type="button" @click="delete(user.id)">delete</button></td>
+        <td><button type="button" @click="deleteUser(user.id)">delete</button></td>
       </tr>
       <tr v-if="items.length === 0">
         <td colspan="3">not found</td>
@@ -92,7 +92,7 @@ export default {
 
       this.getUsers();
     },
-    delete(id) {
+    deleteUser(id) {
       this.axios.post('http://yernar-abilbay.magebithr.com/api/delete.php', {
         id: id
       }).then(resp => {
