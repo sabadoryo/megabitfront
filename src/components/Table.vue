@@ -31,11 +31,13 @@
         <th>Created at
           <button @click="triggerGetUsers('created_at')">&#8597;</button>
         </th>
+        <th>DELETE</th>
       </tr>
       <tr v-for="user in items" :key="user.id">
         <td>{{ user.id }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.created_at }}</td>
+        <td><button type="button" @click="delete(user.id)">delete</button></td>
       </tr>
       <tr v-if="items.length === 0">
         <td colspan="3">not found</td>
@@ -89,6 +91,14 @@ export default {
       }
 
       this.getUsers();
+    },
+    delete(id) {
+      this.axios.post('http://yernar-abilbay.magebithr.com/api/delete.php', {
+        id: id
+      }).then(resp => {
+        console.log(resp)
+        this.triggerGetUsers()
+      })
     }
   },
   mounted() {
